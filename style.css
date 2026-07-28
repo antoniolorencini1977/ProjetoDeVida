@@ -33,6 +33,11 @@
     background-color: #0056b3;
 }
 
+/* Estado do botão ativo */
+.botao.ativo {
+    background-color: #004085;
+}
+
 /* Área do conteúdo das abas */
 .abas-conteudo {
     margin-top: 20px;
