@@ -9,17 +9,24 @@
 .titulo-principal {
     font-size: 2rem;
     color: #333;
+    margin-bottom: 20px;
 }
 
-.botoes {
+/* Estrutura vertical para os botões e caixas de texto */
+.lista-objetivos {
     display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.item-objetivo {
+    width: 100%;
 }
 
 .botao {
-    padding: 10px 20px;
+    width: 100%;
+    text-align: left;
+    padding: 12px 20px;
     border: none;
     background-color: #007bff;
     color: white;
@@ -33,26 +40,18 @@
     background-color: #0056b3;
 }
 
-/* Estado do botão ativo */
-.botao.ativo {
-    background-color: #004085;
-}
-
-/* Área do conteúdo das abas */
-.abas-conteudo {
-    margin-top: 20px;
-}
-
+/* Área do conteúdo das caixas que abrem abaixo de cada botão */
 .aba-conteudo {
     display: none; /* Inicia escondido */
     background-color: #f9f9f9;
     padding: 20px;
+    margin-top: 10px;
     border-radius: 8px;
     border: 1px solid #ddd;
 }
 
 .aba-conteudo.ativo {
-    display: block; /* Exibe quando ativado via JavaScript */
+    display: block; /* Exibe logo abaixo do botão ao clicar */
 }
 
 .aba-conteudo h3 {
@@ -61,7 +60,7 @@
     color: #333;
 }
 
-/* Estilização dos 3 campos de texto */
+/* Estilização dos campos de texto (parágrafos) */
 .campo-objetivo {
     margin-bottom: 15px;
 }
