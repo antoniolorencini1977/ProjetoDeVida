@@ -1,17 +1,17 @@
-// Seleciona o botão e a caixa de texto do Inglês
+// Seleciona os elementos do botão e conteúdo do Inglês
 const btnIngles = document.getElementById('btn-ingles');
 const conteudoIngles = document.getElementById('conteudo-ingles');
 
-// Clique do botão Inglês: Abre/Fecha a caixa logo abaixo dele
+// Seleciona os elementos do botão e conteúdo do ENEM
+const btnEnem = document.getElementById('btn-enem');
+const conteudoEnem = document.getElementById('conteudo-enem');
+
+// Evento de clique para o Inglês
 btnIngles.addEventListener('click', function() {
     conteudoIngles.classList.toggle('ativo');
 });
 
-// Seleciona o botão e a caixa de texto do ENEM
-const btnEnem = document.getElementById('btn-enem');
-const conteudoEnem = document.getElementById('conteudo-enem');
-
-// Clique do botão ENEM: Abre/Fecha a caixa logo abaixo dele
+// Evento de clique para o ENEM
 btnEnem.addEventListener('click', function() {
     conteudoEnem.classList.toggle('ativo');
 });
