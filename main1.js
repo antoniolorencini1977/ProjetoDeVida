@@ -6,21 +6,12 @@ const conteudoIngles = document.getElementById('conteudo-ingles');
 const btnEnem = document.getElementById('btn-enem');
 const conteudoEnem = document.getElementById('conteudo-enem');
 
-// Seleciona os elementos do botão e conteúdo do Vestibular
-const btnVestibular = document.getElementById('btn-vestibular');
-const conteudoVestibular = document.getElementById('conteudo-vestibular');
-
-// Clique no botão Inglês
+// Evento de clique para o Inglês
 btnIngles.addEventListener('click', function() {
     conteudoIngles.classList.toggle('ativo');
 });
 
-// Clique no botão ENEM
+// Evento de clique para o ENEM
 btnEnem.addEventListener('click', function() {
     conteudoEnem.classList.toggle('ativo');
-});
-
-// Clique no botão Vestibular
-btnVestibular.addEventListener('click', function() {
-    conteudoVestibular.classList.toggle('ativo');
 });
