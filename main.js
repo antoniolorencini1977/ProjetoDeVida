@@ -1,12 +1,12 @@
-// Seleciona os elementos do botão e conteúdo do Inglês
+// Seleciona os elementos do Inglês
 const btnIngles = document.getElementById('btn-ingles');
 const conteudoIngles = document.getElementById('conteudo-ingles');
 
-// Seleciona os elementos do botão e conteúdo do ENEM
+// Seleciona os elementos do ENEM
 const btnEnem = document.getElementById('btn-enem');
 const conteudoEnem = document.getElementById('conteudo-enem');
 
-// Seleciona os elementos do botão e conteúdo do Vestibular
+// Seleciona os elementos do Vestibular
 const btnVestibular = document.getElementById('btn-vestibular');
 const conteudoVestibular = document.getElementById('conteudo-vestibular');
 
