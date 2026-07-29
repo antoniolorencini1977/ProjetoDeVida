@@ -1,4 +1,3 @@
-/* Importação de fonte moderna do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
 
 :root {
@@ -21,7 +20,8 @@
 
 body {
     font-family: 'Outfit', sans-serif;
-    background: var(--bg-gradient);
+    background: var(--bg-gradient) !important;
+    background-attachment: fixed !important;
     min-height: 100vh;
     color: var(--text-main);
     display: flex;
@@ -30,11 +30,10 @@ body {
     padding: 30px 15px;
 }
 
-/* Container Principal estilo "Glassmorphism" */
 .conteudo-principal {
     width: 100%;
     max-width: 900px;
-    background: rgba(30, 41, 59, 0.7);
+    background: rgba(30, 41, 59, 0.75);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid var(--card-border);
@@ -43,7 +42,6 @@ body {
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
-/* Título */
 .titulo-principal {
     font-size: 2.2rem;
     font-weight: 700;
@@ -60,7 +58,6 @@ body {
     -webkit-text-fill-color: var(--primary-color);
 }
 
-/* Menu de Botões estilo Tabs */
 .botoes {
     display: flex;
     gap: 12px;
@@ -97,15 +94,13 @@ body {
     transform: translateY(-2px);
 }
 
-/* Botão Selecionado / Ativo */
 .botao.ativo {
-    background: var(--primary-color);
-    color: #ffffff;
+    background: var(--primary-color) !important;
+    color: #ffffff !important;
     box-shadow: 0 8px 20px var(--accent-glow);
     border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Área do Conteúdo */
 .abas-conteudo {
     position: relative;
 }
@@ -139,7 +134,6 @@ body {
     padding-bottom: 12px;
 }
 
-/* Campos de Texto (Textareas) */
 .campo-objetivo {
     margin-bottom: 20px;
 }
@@ -180,7 +174,6 @@ body {
     background: rgba(15, 23, 42, 0.8);
 }
 
-/* Frame do Google Docs na 4ª Aba */
 .iframe-curriculo {
     width: 100%;
     height: 550px;
@@ -190,7 +183,25 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* Responsividade para celulares */
+/* Estilização do Rodapé */
+.rodape {
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+}
+
+.rodape p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+}
+
+.rodape span {
+    color: #ffffff;
+    font-weight: 600;
+}
+
 @media (max-width: 640px) {
     .conteudo-principal {
         padding: 24px 16px;
