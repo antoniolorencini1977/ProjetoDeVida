@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Objetivos do Ano</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="conteudo-principal">
+        <h2 class="titulo-principal">Meus Objetivos do Ano<span>_</span></h2>
+        
+        <div class="botoes">
+            <button class="botao" id="btn-ingles">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 21a9 9 0 100-18 9 9 0 000 18z"></path><path d="M3.6 9h16.8M3.6 15h16.8"></path></svg>
+                Fazer Inglês
+            </button>
+            <button class="botao" id="btn-enem">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>
+                Nota ENEM
+            </button>
+            <button class="botao" id="btn-vestibular">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"></path></svg>
+                Vestibular
+            </button>
+            <button class="botao" id="btn-curriculo">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z"></path><path d="M14 2v6h6"></path><path d="M16 13H8M16 17H8M10 9H8"></path></svg>
+                Currículo
+            </button>
+        </div>
+
+        <div class="abas-conteudo">
+            
+            <!-- Conteúdo do Inglês -->
+            <div class="aba-conteudo" id="conteudo-ingles">
+                <h3 class="aba-conteudo-titulo-principal">Finalidades para o Inglês</h3>
+                
+                <div class="campo-objetivo">
+                    <label for="ingles-obj1">Objetivo 1</label>
+                    <textarea id="ingles-obj1" placeholder="Alcançar nível B2 para conversação..."></textarea>
+                </div>
+
+                <div class="campo-objetivo">
+                    <label for="ingles-obj2">Objetivo 2</label>
+                    <textarea id="ingles-obj2" placeholder="Praticar escuta com podcasts diários..."></textarea>
+                </div>
+
+                <div class="campo-objetivo">
+                    <label for="ingles-obj3">Objetivo 3</label>
+                    <textarea id="ingles-obj3" placeholder="Ler 2 livros em inglês até o fim do ano..."></textarea>
+                </div>
+            </div>
+
+            <!-- Conteúdo do ENEM -->
+            <div class="aba-conteudo" id="conteudo-enem">
+                <h3 class="aba-conteudo-titulo-principal">Finalidades para o ENEM</h3>
+                
+                <div class="campo-objetivo">
+                    <label for="enem-obj1">Objetivo 1</label>
+                    <textarea id="enem-obj1" placeholder="Tirar mais de 900 na Redação..."></textarea>
+                </div>
+
+                <div class="campo-objetivo">
+                    <label for="enem-obj2">Objetivo 2</label>
+                    <textarea id="enem-obj2" placeholder="Fazer 2 simulados por mês..."></textarea>
+                </div>
+
+                <div class="campo-objetivo">
+                    <label for="enem-obj3">Objetivo 3</label>
+                    <textarea id="enem-obj3" placeholder="Revisar Matemática Básica semanalmente..."></textarea>
+                </div>
+            </div>
+
+            <!-- Conteúdo do Vestibular -->
+            <div class="aba-conteudo" id="conteudo-vestibular">
+                <h3 class="aba-conteudo-titulo-principal">Finalidades para o Vestibular</h3>
+                
+                <div class="campo-objetivo">
+                    <label for="vestibular-obj1">Objetivo 1</label>
+                    <textarea id="vestibular-obj1" placeholder="Dominar as leituras obrigatórias..."></textarea>
+                </div>
+
+                <div class="campo-objetivo">
+                    <label for="vestibular-obj2">Objetivo 2</label>
+                    <textarea id="vestibular-obj2" placeholder="Resolver provas dos últimos 5 anos..."></textarea>
+                </div>
+
+                <div class="campo-objetivo">
+                    <label for="vestibular-obj3">Objetivo 3</label>
+                    <textarea id="vestibular-obj3" placeholder="Treinar gestão de tempo nas provas..."></textarea>
+                </div>
+            </div>
+
+            <!-- Conteúdo do Currículo (Google Docs) -->
+            <div class="aba-conteudo" id="conteudo-curriculo">
+                <h3 class="aba-conteudo-titulo-principal">Meu Currículo - Google Docs</h3>
+                <iframe 
+                    src="https://docs.google.com/document/d/1U83vrY_qnT5jPVnGaHf1C57nIq3u1306e1av0F2DyiM/preview" 
+                    title="Documento do Google Docs - Currículo"
+                    class="iframe-curriculo">
+                </iframe>
+            </div>
+
+        </div>
+
+        <!-- Rodapé adicionado aqui -->
+        <footer class="rodape">
+            <p>Criado por: <span>Antonio Lorencini</span></p>
+        </footer>
+
+    </section>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
