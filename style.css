@@ -33,21 +33,27 @@
     background-color: #0056b3;
 }
 
+.botao.ativo {
+    background-color: #004085;
+}
+
 /* Área do conteúdo das abas */
 .abas-conteudo {
     margin-top: 20px;
 }
 
+/* IMPORTANTE: Força todas as abas a ficarem ocultas por padrão */
 .aba-conteudo {
-    display: none; /* Inicia escondido */
+    display: none !important;
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
     border: 1px solid #ddd;
 }
 
+/* Exibe APENAS a aba que tiver a classe ativo */
 .aba-conteudo.ativo {
-    display: block; /* Exibe quando ativado via JavaScript */
+    display: block !important;
 }
 
 .aba-conteudo h3 {

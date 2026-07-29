@@ -1,4 +1,18 @@
-// Seleciona os elementos dos botões e conteúdos
+// Seleciona TODOS os elementos de botões e de conteúdos de uma só vez
+const botoes = document.querySelectorAll('.botao');
+const conteudos = document.querySelectorAll('.aba-conteudo');
+
+// Função que esconde TODAS as abas e remove destaque dos botões
+function esconderTodasAsAbas() {
+    conteudos.forEach(function(conteudo) {
+        conteudo.classList.remove('ativo');
+    });
+    botoes.forEach(function(botao) {
+        botao.classList.remove('ativo');
+    });
+}
+
+// Configuração individual para cada botão
 const btnIngles = document.getElementById('btn-ingles');
 const conteudoIngles = document.getElementById('conteudo-ingles');
 
@@ -8,36 +22,45 @@ const conteudoEnem = document.getElementById('conteudo-enem');
 const btnVestibular = document.getElementById('btn-vestibular');
 const conteudoVestibular = document.getElementById('conteudo-vestibular');
 
-// Função para fechar todas as caixas de texto ativas
-function fecharTodasAsAbas() {
-    conteudoIngles.classList.remove('ativo');
-    conteudoEnem.classList.remove('ativo');
-    conteudoVestibular.classList.remove('ativo');
-}
+const btnCurriculo = document.getElementById('btn-curriculo');
+const conteudoCurriculo = document.getElementById('conteudo-curriculo');
 
-// Clique no botão Inglês
+// Clique Inglês
 btnIngles.addEventListener('click', function() {
-    const jaEstaAberto = conteudoIngles.classList.contains('ativo');
-    fecharTodasAsAbas();
-    if (!jaEstaAberto) {
+    const jaEstavaAberto = conteudoIngles.classList.contains('ativo');
+    esconderTodasAsAbas();
+    if (!jaEstavaAberto) {
         conteudoIngles.classList.add('ativo');
+        btnIngles.classList.add('ativo');
     }
 });
 
-// Clique no botão ENEM
+// Clique ENEM
 btnEnem.addEventListener('click', function() {
-    const jaEstaAberto = conteudoEnem.classList.contains('ativo');
-    fecharTodasAsAbas();
-    if (!jaEstaAberto) {
+    const jaEstavaAberto = conteudoEnem.classList.contains('ativo');
+    esconderTodasAsAbas();
+    if (!jaEstavaAberto) {
         conteudoEnem.classList.add('ativo');
+        btnEnem.classList.add('ativo');
     }
 });
 
-// Clique no botão Vestibular
+// Clique Vestibular
 btnVestibular.addEventListener('click', function() {
-    const jaEstaAberto = conteudoVestibular.classList.contains('ativo');
-    fecharTodasAsAbas();
-    if (!jaEstaAberto) {
+    const jaEstavaAberto = conteudoVestibular.classList.contains('ativo');
+    esconderTodasAsAbas();
+    if (!jaEstavaAberto) {
         conteudoVestibular.classList.add('ativo');
+        btnVestibular.classList.add('ativo');
+    }
+});
+
+// Clique Currículo
+btnCurriculo.addEventListener('click', function() {
+    const jaEstavaAberto = conteudoCurriculo.classList.contains('ativo');
+    esconderTodasAsAbas();
+    if (!jaEstavaAberto) {
+        conteudoCurriculo.classList.add('ativo');
+        btnCurriculo.classList.add('ativo');
     }
 });
