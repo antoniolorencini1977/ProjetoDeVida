@@ -1,9 +1,21 @@
-// Seleciona TODOS os elementos de botões e de conteúdos de uma só vez
+// Seleciona todos os botões e conteúdos das abas
 const botoes = document.querySelectorAll('.botao');
 const conteudos = document.querySelectorAll('.aba-conteudo');
 
-// Função que esconde TODAS as abas e remove destaque dos botões
-function esconderTodasAsAbas() {
+// Seleção dos botões individuais
+const btnIngles = document.getElementById('btn-ingles');
+const btnEnem = document.getElementById('btn-enem');
+const btnVestibular = document.getElementById('btn-vestibular');
+const btnCurriculo = document.getElementById('btn-curriculo');
+
+// Seleção dos blocos de conteúdo individuais
+const conteudoIngles = document.getElementById('conteudo-ingles');
+const conteudoEnem = document.getElementById('conteudo-enem');
+const conteudoVestibular = document.getElementById('conteudo-vestibular');
+const conteudoCurriculo = document.getElementById('conteudo-curriculo');
+
+// Função para fechar/esconder todas as abas ativas
+function fecharTodasAsAbas() {
     conteudos.forEach(function(conteudo) {
         conteudo.classList.remove('ativo');
     });
@@ -12,54 +24,41 @@ function esconderTodasAsAbas() {
     });
 }
 
-// Configuração individual para cada botão
-const btnIngles = document.getElementById('btn-ingles');
-const conteudoIngles = document.getElementById('conteudo-ingles');
-
-const btnEnem = document.getElementById('btn-enem');
-const conteudoEnem = document.getElementById('conteudo-enem');
-
-const btnVestibular = document.getElementById('btn-vestibular');
-const conteudoVestibular = document.getElementById('conteudo-vestibular');
-
-const btnCurriculo = document.getElementById('btn-curriculo');
-const conteudoCurriculo = document.getElementById('conteudo-curriculo');
-
-// Clique Inglês
+// Botão 1: Fazer Inglês
 btnIngles.addEventListener('click', function() {
-    const jaEstavaAberto = conteudoIngles.classList.contains('ativo');
-    esconderTodasAsAbas();
-    if (!jaEstavaAberto) {
+    const estaAberto = conteudoIngles.classList.contains('ativo');
+    fecharTodasAsAbas();
+    if (!estaAberto) {
         conteudoIngles.classList.add('ativo');
         btnIngles.classList.add('ativo');
     }
 });
 
-// Clique ENEM
+// Botão 2: Tirar boa nota ENEM
 btnEnem.addEventListener('click', function() {
-    const jaEstavaAberto = conteudoEnem.classList.contains('ativo');
-    esconderTodasAsAbas();
-    if (!jaEstavaAberto) {
+    const estaAberto = conteudoEnem.classList.contains('ativo');
+    fecharTodasAsAbas();
+    if (!estaAberto) {
         conteudoEnem.classList.add('ativo');
         btnEnem.classList.add('ativo');
     }
 });
 
-// Clique Vestibular
+// Botão 3: Passar no Vestibular
 btnVestibular.addEventListener('click', function() {
-    const jaEstavaAberto = conteudoVestibular.classList.contains('ativo');
-    esconderTodasAsAbas();
-    if (!jaEstavaAberto) {
+    const estaAberto = conteudoVestibular.classList.contains('ativo');
+    fecharTodasAsAbas();
+    if (!estaAberto) {
         conteudoVestibular.classList.add('ativo');
         btnVestibular.classList.add('ativo');
     }
 });
 
-// Clique Currículo
+// Botão 4: Criar meu currículo (Google Docs)
 btnCurriculo.addEventListener('click', function() {
-    const jaEstavaAberto = conteudoCurriculo.classList.contains('ativo');
-    esconderTodasAsAbas();
-    if (!jaEstavaAberto) {
+    const estaAberto = conteudoCurriculo.classList.contains('ativo');
+    fecharTodasAsAbas();
+    if (!estaAberto) {
         conteudoCurriculo.classList.add('ativo');
         btnCurriculo.classList.add('ativo');
     }
