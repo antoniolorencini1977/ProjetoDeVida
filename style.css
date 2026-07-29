@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 
 :root {
     --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
@@ -6,10 +6,10 @@
     --card-border: rgba(255, 255, 255, 0.1);
     --primary-color: #6366f1;
     --primary-hover: #4f46e5;
-    --accent-glow: rgba(99, 102, 241, 0.35);
+    --accent-glow: rgba(99, 102, 241, 0.25);
     --text-main: #f8fafc;
     --text-muted: #94a3b8;
-    --input-bg: rgba(15, 23, 42, 0.6);
+    --input-bg: rgba(15, 23, 42, 0.65);
 }
 
 * {
@@ -107,7 +107,6 @@ body {
     border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Deixa o ícone branco quando o botão estiver ativo */
 .botao.ativo .icone-btn {
     filter: brightness(0) invert(1);
 }
@@ -145,43 +144,42 @@ body {
     padding-bottom: 12px;
 }
 
+/* Estrutura dos Campos Fixo com o Visual Exato da Caixa */
 .campo-objetivo {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
-.campo-objetivo label {
-    display: block;
-    font-size: 0.9rem;
-    font-weight: 600;
+.label-container {
     margin-bottom: 8px;
-    color: #cbd5e1;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
 
-.campo-objetivo textarea {
+.label-titulo {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #a5b4fc;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+/* Caixa com exatamente o mesmo estilo do textarea, porém fixa */
+.caixa-objetivo-fixo {
     width: 100%;
-    height: 85px;
-    padding: 14px 16px;
+    min-height: 85px;
+    padding: 16px 18px;
     background: var(--input-bg);
     border: 1px solid var(--card-border);
-    border-radius: 12px;
-    color: #ffffff;
+    border-radius: 14px;
+    color: #f1f5f9;
     font-family: inherit;
     font-size: 0.95rem;
-    resize: vertical;
-    box-sizing: border-box;
-    transition: all 0.3s ease;
+    line-height: 1.5;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.campo-objetivo textarea::placeholder {
-    color: #64748b;
-}
-
-.campo-objetivo textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px var(--accent-glow);
+.caixa-objetivo-fixo:hover {
+    border-color: rgba(99, 102, 241, 0.4);
+    box-shadow: 0 0 0 3px var(--accent-glow), inset 0 2px 4px rgba(0, 0, 0, 0.2);
     background: rgba(15, 23, 42, 0.8);
 }
 
@@ -194,7 +192,7 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilização do Rodapé */
+/* Rodapé */
 .rodape {
     margin-top: 35px;
     padding-top: 20px;
