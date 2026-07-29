@@ -88,6 +88,12 @@ body {
     gap: 8px;
 }
 
+.icone-btn {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+}
+
 .botao:hover {
     color: #ffffff;
     background: rgba(255, 255, 255, 0.05);
@@ -99,6 +105,11 @@ body {
     color: #ffffff !important;
     box-shadow: 0 8px 20px var(--accent-glow);
     border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Deixa o ícone branco quando o botão estiver ativo */
+.botao.ativo .icone-btn {
+    filter: brightness(0) invert(1);
 }
 
 .abas-conteudo {
