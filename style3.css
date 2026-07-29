@@ -1,0 +1,101 @@
+/* Estilos básicos do layout */
+.conteudo-principal {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.titulo-principal {
+    font-size: 2rem;
+    color: #333;
+}
+
+.botoes {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.botao {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s;
+}
+
+.botao:hover {
+    background-color: #0056b3;
+}
+
+.botao.ativo {
+    background-color: #004085;
+}
+
+/* Área do conteúdo das abas */
+.abas-conteudo {
+    margin-top: 20px;
+}
+
+/* Oculta todas as abas por padrão */
+.aba-conteudo {
+    display: none !important;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Exibe apenas a aba ativa */
+.aba-conteudo.ativo {
+    display: block !important;
+}
+
+.aba-conteudo h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Estilização dos campos de texto das abas 1, 2 e 3 */
+.campo-objetivo {
+    margin-bottom: 15px;
+}
+
+.campo-objetivo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.campo-objetivo textarea {
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.campo-objetivo textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+}
+
+/* Estilização da janela do Google Docs para a 4ª aba */
+.iframe-curriculo {
+    width: 100%;
+    height: 600px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #ffffff;
+}

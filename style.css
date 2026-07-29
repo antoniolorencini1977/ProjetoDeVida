@@ -1,101 +1,210 @@
-/* Estilos básicos do layout */
+/* Importação de fonte moderna do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+
+:root {
+    --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --card-border: rgba(255, 255, 255, 0.1);
+    --primary-color: #6366f1;
+    --primary-hover: #4f46e5;
+    --accent-glow: rgba(99, 102, 241, 0.35);
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --input-bg: rgba(15, 23, 42, 0.6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background: var(--bg-gradient);
+    min-height: 100vh;
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+/* Container Principal estilo "Glassmorphism" */
 .conteudo-principal {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
+    width: 100%;
+    max-width: 900px;
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--card-border);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
+/* Título */
 .titulo-principal {
-    font-size: 2rem;
-    color: #333;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
+    background: linear-gradient(90deg, #ffffff 0%, #a5b4fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
+.titulo-principal span {
+    color: var(--primary-color);
+    -webkit-text-fill-color: var(--primary-color);
+}
+
+/* Menu de Botões estilo Tabs */
 .botoes {
     display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 12px;
+    justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 35px;
+    background: rgba(15, 23, 42, 0.4);
+    padding: 8px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .botao {
-    padding: 10px 20px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
+    flex: 1 1 180px;
+    padding: 14px 20px;
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--text-muted);
+    border-radius: 12px;
     cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.2s;
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: inherit;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
 .botao:hover {
-    background-color: #0056b3;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-2px);
 }
 
+/* Botão Selecionado / Ativo */
 .botao.ativo {
-    background-color: #004085;
+    background: var(--primary-color);
+    color: #ffffff;
+    box-shadow: 0 8px 20px var(--accent-glow);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Área do conteúdo das abas */
+/* Área do Conteúdo */
 .abas-conteudo {
-    margin-top: 20px;
+    position: relative;
 }
 
-/* Oculta todas as abas por padrão */
 .aba-conteudo {
     display: none !important;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
+    animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-/* Exibe apenas a aba ativa */
 .aba-conteudo.ativo {
     display: block !important;
 }
 
-.aba-conteudo h3 {
-    margin-top: 0;
-    margin-bottom: 15px;
-    color: #333;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Estilização dos campos de texto das abas 1, 2 e 3 */
+.aba-conteudo-titulo-principal {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: #e2e8f0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 12px;
+}
+
+/* Campos de Texto (Textareas) */
 .campo-objetivo {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .campo-objetivo label {
     display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #555;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #cbd5e1;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .campo-objetivo textarea {
     width: 100%;
-    height: 70px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+    height: 85px;
+    padding: 14px 16px;
+    background: var(--input-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    color: #ffffff;
     font-family: inherit;
+    font-size: 0.95rem;
     resize: vertical;
     box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.campo-objetivo textarea::placeholder {
+    color: #64748b;
 }
 
 .campo-objetivo textarea:focus {
     outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--accent-glow);
+    background: rgba(15, 23, 42, 0.8);
 }
 
-/* Estilização da janela do Google Docs para a 4ª aba */
+/* Frame do Google Docs na 4ª Aba */
 .iframe-curriculo {
     width: 100%;
-    height: 600px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    background-color: #ffffff;
+    height: 550px;
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsividade para celulares */
+@media (max-width: 640px) {
+    .conteudo-principal {
+        padding: 24px 16px;
+    }
+
+    .titulo-principal {
+        font-size: 1.75rem;
+    }
+
+    .botoes {
+        flex-direction: column;
+    }
+
+    .botao {
+        width: 100%;
+    }
 }
